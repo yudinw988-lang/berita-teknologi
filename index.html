@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Berita Teknologi - Rangkuman Harian</title>
+<style>
+  body{font-family:sans-serif;max-width:800px;margin:0 auto;padding:20px;background:#f5f5f5}
+  h1{color:#1a1a2e;text-align:center}
+  .card{background:white;border-radius:10px;padding:20px;margin:15px 0;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+  .card h2{color:#16213e;font-size:18px}
+  .card p{color:#444;line-height:1.7}
+  .tag{background:#0f3460;color:white;padding:3px 10px;border-radius:99px;font-size:12px}
+  .loading{text-align:center;padding:40px;color:#888}
+</style>
+</head>
+<body>
+<h1>🔬 Berita Teknologi Hari Ini</h1>
+<p style="text-align:center;color:#888">Rangkuman otomatis berita teknologi terkini</p>
+<div id="berita"><div class="loading">Memuat berita...</div></div>
+<script>
+const berita=[
+  {judul:"Website dalam tahap pengembangan",isi:"Sistem rangkuman berita otomatis sedang disiapkan. Segera hadir berita teknologi terkini yang dirangkum oleh AI setiap hari.",tag:"Info"}
+];
+const container=document.getElementById('berita');
+container.innerHTML=berita.map(b=>`
+  <div class="card">
+    <span class="tag">${b.tag}</span>
+    <h2>${b.judul}</h2>
+    <p>${b.isi}</p>
+  </div>
+`).join('');
+</script>
+</body>
+</html>
